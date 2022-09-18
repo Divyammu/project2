@@ -1,0 +1,82 @@
+import time
+import datetime
+food=["biriyani","pizza","burger","pasta","paneer 65","paneer tikka","tandoori chicken"]
+print(food)
+prices=[150,120,100,130,100,80,350]
+myorderFood=[]
+myorderCost=[]
+counter=0
+total=0
+print("5 star")
+order=input("can i take your order!")
+if order=="no":
+	exit()
+else:
+	print("thank you")
+nextOrder=True
+while nextOrder==True:
+	foodOrder=input("enter your item:")
+	
+	if foodOrder=="biriyani":
+		myorderFood.append(food[0])
+		myorderCost.append(prices[0])
+		counter=counter+1
+		total=total+(prices[0])
+	elif foodOrder=="pizza":
+		myorderFood.append(food[1])
+		myorderCost.append(prices[1])
+		counter=counter+1
+		total=total+(prices[1])
+	elif foodOrder=="burger":
+		myorderFood.append(food[2])
+		myorderCost.append(prices[2])
+		counter=counter+1
+		total=total+(prices[2])
+	elif foodOrder=="pasta":
+		myorderFood.append(food[3])
+		myorderCost.append(prices[3])
+		counter=counter+1
+		total=total+(prices[3])
+	elif foodOrder=="paneer 65":
+		myorderFood.append(food[4])
+		myorderCost.append(prices[4])
+		counter=counter+1
+		total=total+(prices[4])
+	elif foodOrder=="paneer tikka":
+		myorderFood.append(food[5])
+		myorderCost.append(prices[5])
+		counter=counter+1
+		total=total+(prices[5])
+		
+	elif foodOrder=="tandoori chicken":
+		myorderFood.append(food[6])
+		myorderCost.append(prices[6])
+		counter=counter+1
+		total=total+(prices[6])
+	
+	else:
+		print("not in menu")
+	finished=input("you have finished order Y/N")
+	if finished=="N":
+	   nextOrder=True
+	else:
+	   nextOrder=False
+y=0
+print("here is your order")
+print("      ")
+print("*******")
+while y<counter:
+	print("item:"+(myorderFood[y]))
+	print("cost:$"+str(myorderCost[y]))
+	y=y+1
+	
+print("the final cost is $"+str(total))
+	
+x=datetime.datetime.now()
+print(x)
+	
+	
+
+ 
+    
+	
